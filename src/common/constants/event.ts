@@ -1,0 +1,1 @@
+export const EVENT_APP_HOME_OPENED = 'app_home_opened';

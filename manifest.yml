@@ -1,0 +1,39 @@
+display_information:
+  name: Slack-bot
+features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
+  bot_user:
+    display_name: Slack-bot-app
+    always_online: true
+  slash_commands:
+    - command: /test
+      url: https://amitav.ngrok.io/slack/events
+      description: to test command
+      should_escape: false
+oauth_config:
+  redirect_urls:
+    - https://amitav.ngrok.io/slack/redirect
+  scopes:
+    user:
+      - chat:write
+    bot:
+      - chat:write
+      - users:read
+      - users:read.email
+      - im:write
+      - commands
+settings:
+  event_subscriptions:
+    request_url: https://amitav.ngrok.io/slack/events
+    bot_events:
+      - app_home_opened
+      - app_uninstalled
+  interactivity:
+    is_enabled: true
+    request_url: https://amitav.ngrok.io/slack/events
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
