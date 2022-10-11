@@ -8,11 +8,6 @@ features:
   bot_user:
     display_name: Slack-bot-app
     always_online: true
-  slash_commands:
-    - command: /test
-      url: https://amitav.ngrok.io/slack/events
-      description: to test command
-      should_escape: false
 oauth_config:
   redirect_urls:
     - https://amitav.ngrok.io/slack/redirect
