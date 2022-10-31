@@ -18,6 +18,12 @@ export class AppService {
   }
 
   initSlackCommand(boltApp: any): void {
+    
+    boltApp.command('/test', async ({ command, ack, respond }) => {
+      // Acknowledge command request
+      await ack();
+      await respond(`Hi ${command.user_name}, How are you!`,);
+    });
 
     // action on  events
     boltApp.event(
