@@ -25,6 +25,15 @@ export class AppService {
       await respond(`Hi ${command.user_name}, How are you!`,);
     });
 
+    boltApp.command(
+      '/hash', async ({ command, ack, respond }) => {
+
+        await ack();
+        await respond(`Hey how r u`);
+
+      }
+    );
+
     // action on  events
     boltApp.event(
       EVENT_APP_HOME_OPENED,
